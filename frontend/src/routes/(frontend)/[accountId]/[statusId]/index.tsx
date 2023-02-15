@@ -6,7 +6,6 @@ import { formatRoundedNumber } from '~/utils/numbers'
 import * as statusAPI from 'wildebeest/functions/api/v1/statuses/[id]'
 import * as contextAPI from 'wildebeest/functions/api/v1/statuses/[id]/context'
 import { DocumentHead, Link, loader$ } from '@builder.io/qwik-city'
-import StickyHeader from '~/components/StickyHeader/StickyHeader'
 import { Avatar } from '~/components/avatar'
 import { MediaGallery } from '~/components/MediaGallery.tsx'
 import { getNotFoundHtml } from '~/utils/getNotFoundHtml/getNotFoundHtml'
@@ -55,7 +54,6 @@ export default component$(() => {
 
 	return (
 		<>
-			<StickyHeader withBackButton />
 			<div class="bg-wildebeest-700 p-4">
 				<AccountCard status={loaderData.status} />
 				<div class="leading-normal inner-html-content text-lg" dangerouslySetInnerHTML={loaderData.status.content} />
